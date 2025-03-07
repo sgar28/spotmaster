@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_SUPABASE_URL": "@vite_supabase_url",
+    "VITE_SUPABASE_ANON_KEY": "@vite_supabase_anon_key",
+    "VITE_GOOGLE_MAPS_API_KEY": "@vite_google_maps_api_key",
+    "VITE_RAZORPAY_KEY_ID": "@vite_razorpay_key_id",
+    "VITE_RAZORPAY_KEY_SECRET": "@vite_razorpay_key_secret",
+    "VITE_EMAIL_USER": "@vite_email_user",
+    "VITE_EMAIL_PASSWORD": "@vite_email_password",
+    "VITE_SMS_ACCOUNT_SID": "@vite_sms_account_sid",
+    "VITE_SMS_AUTH_TOKEN": "@vite_sms_auth_token",
+    "VITE_SMS_FROM_NUMBER": "@vite_sms_from_number"
+  }
+} 
